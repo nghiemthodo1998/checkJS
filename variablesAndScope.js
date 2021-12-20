@@ -1,7 +1,9 @@
 // Var
+// global-scope
 var language = 'JavaScript';
 
 function checkName() {
+  // function-scope
   var language = 'ReactJs';
 
   console.log(language); // ReactJs     ---> biến thuộc function-scope
@@ -12,6 +14,7 @@ console.log(language); //JavaScript     ---> biến thuộc global-scope
 //----------------------------------
 
 if (true) {
+  //block-scope
   var test = true;
 }
 console.log(test); // true       ---> biến không thuộc block-scope
@@ -19,12 +22,14 @@ console.log(test); // true       ---> biến không thuộc block-scope
 //----------------------------------
 
 for (var i = 0; i < 10; i++) {
+  //loop-local
   var one = 1;
 }
 console.log(one); // 1        ---> biến không thuộc loop-local
 
 //----------------------------------
 
+//global-scope
 var language = 'Java';
 console.log(language); // Java      ---> có thể khai báo lại 1 biến với var
 language = 'Python';
@@ -37,6 +42,7 @@ console.log(language); // Python        ---> có thể gán cho biến 1 giá tr
 
 //Let
 {
+  //block-scope
   let language = 'React';
   console.log(language); // React       ---> biến thuộc block-scope
 }
@@ -46,6 +52,7 @@ console.log(language); // Python        ---> có thể gán cho biến 1 giá tr
 //------------------------
 
 function foo() {
+  //function-scope
   let language = 'Python';
   console.log(language); // Python      ---> biến thuộc function-scope
 }
