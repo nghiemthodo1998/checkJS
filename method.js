@@ -31,3 +31,31 @@ const result = words.filter((word) => word.length > 6);
 
 console.log(result); // ["exuberant", "destruction", "present"]
 // ---> filter() trả về mảng mới gồm các phần tử thỏa mãn điều kiện hoặc 1 mảng trống
+
+//-------------------
+const array5 = [1, 2, 3, 4];
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array5.reduce(reducer)); // 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array5.reduce(reducer, 5)); //15
+// ---> thực thi 1 hàm callback lên các phần tử của mảng và trả về giá trị tích lũy duy nhất
+
+//---------------
+const array6 = [5, 12, 8, 130, 44];
+
+const found = array6.find((element) => element > 10);
+
+console.log(found); // 12
+// ---> trả về giá trị của phần tử đầu tiên thỏa mãn điều kiện hoặc undefined
+
+//-----------------
+
+const array7 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array7.findIndex(isLargeNumber)); // 3
+// ---> trả về chỉ số của phần tử đầu tiên thỏa mãn điều kiện hoặc -1
